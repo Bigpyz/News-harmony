@@ -2,6 +2,7 @@ package main
 
 import (
 	"backend/model"
+	"backend/router"
 	"github.com/gin-gonic/gin"
 )
 

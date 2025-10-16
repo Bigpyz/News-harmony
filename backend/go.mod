@@ -4,7 +4,11 @@ go 1.24.0
 
 toolchain go1.24.3
 
-require github.com/gin-gonic/gin v1.11.0
+require (
+	github.com/gin-gonic/gin v1.11.0
+	gorm.io/driver/sqlite v1.6.0
+	gorm.io/gorm v1.31.0
+)
 
 require (
 	github.com/bytedance/sonic v1.14.0 // indirect
@@ -41,6 +45,4 @@ require (
 	golang.org/x/text v0.30.0 // indirect
 	golang.org/x/tools v0.37.0 // indirect
 	google.golang.org/protobuf v1.36.9 // indirect
-	gorm.io/driver/sqlite v1.6.0 // indirect
-	gorm.io/gorm v1.31.0 // indirect
 )
