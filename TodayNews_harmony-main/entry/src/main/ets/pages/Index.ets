@@ -1,5 +1,6 @@
 @Entry
 @Component
+//hkh
 struct Index {
   @State message: string = 'Hello World'
 
