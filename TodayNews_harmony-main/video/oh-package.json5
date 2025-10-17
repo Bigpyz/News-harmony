@@ -6,6 +6,6 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "common": "file:../common"
+    "common": "file:../../../../newsOS/commons/common"
   }
 }
