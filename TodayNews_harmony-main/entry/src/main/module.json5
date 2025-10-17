@@ -21,7 +21,17 @@
         "label": "$string:EntryAbility_label",
         "startWindowIcon": "$media:icon_1024_Normal",
         "startWindowBackground": "$color:start_window_background",
-        "exported": true
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
       }
     ]
   }

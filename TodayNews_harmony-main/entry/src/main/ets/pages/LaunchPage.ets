@@ -7,7 +7,12 @@ struct LaunchPage {
 
   aboutToAppear(){
     setTimeout(()=>{
-      router.replaceUrl({url:"pages/MainPage"})
+      const isLoggedIn: boolean = AppStorage.Get<boolean>('isLoggedIn') ?? false
+      if (isLoggedIn) {
+        router.replaceUrl({url:"pages/MainPage"})
+      } else {
+        router.replaceUrl({url:"pages/LoginPage"})
+      }
     },2000)
   }
 

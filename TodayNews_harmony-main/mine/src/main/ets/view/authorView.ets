@@ -1,5 +1,23 @@
+import type { User } from 'common/src/main/ets/domain/user/User'
+
 @Component
 export struct authorView {
+  @State follow: number = ((AppStorage.Get('currentUser') as User | undefined)?.follow) ?? 0
+  @State fans: number = ((AppStorage.Get('currentUser') as User | undefined)?.fans) ?? 0
+  @State likes: number = ((AppStorage.Get('currentUser') as User | undefined)?.likes) ?? 0
+
+  aboutToAppear(){
+    // 当 currentUser 更新时，拉取最新数值
+    const user: User | undefined = AppStorage.Get('currentUser') as User | undefined
+    if (user) {
+      console.log(`${JSON.stringify(user)}`)
+
+      this.follow = user.follow ?? 0
+      this.fans = user.fans ?? 0
+      this.likes = user.likes ?? 0
+    }
+  }
+
   build() {
     Row() {
       Image($r('app.media.avatar'))
@@ -15,7 +33,7 @@ export struct authorView {
           .fontWeight(FontWeight.Bold)
           .fontSize(18)
         Text() {
-          Span("688")
+          Span(`${this.follow}`)
             .fontColor(Color.White)
             .fontColor(Color.White)
             .fontWeight(FontWeight.Bold)
@@ -26,7 +44,7 @@ export struct authorView {
           Span("  |  ")
             .fontColor(Color.White)
             .fontSize(14)
-          Span("88")
+          Span(`${this.fans}`)
             .fontColor(Color.White)
             .fontColor(Color.White)
             .fontWeight(FontWeight.Bold)
@@ -37,7 +55,7 @@ export struct authorView {
           Span("  |  ")
             .fontColor(Color.White)
             .fontSize(14)
-          Span("10万")
+          Span(`${this.likes}`)
             .fontColor(Color.White)
             .fontWeight(FontWeight.Bold)
             .fontSize(18)
