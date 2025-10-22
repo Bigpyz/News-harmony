@@ -1,7 +1,0 @@
-{
-  "src": [
-    "pages/MinePage",
-    "pages/CertificationPage",
-    "pages/EditProfilePage"
-  ]
-}

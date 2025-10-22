@@ -30,38 +30,50 @@ export class VideoItem {
 export const VIDEO_DATA: VideoItem[] = [
   {
     id: '1',
-    src: $rawfile('oUiC9RMqlQNDAyARZBIe6x3DI0ngstAzOgbeZs.MP4'),
+    src: $rawfile('1.mp4'),
     likesCount: 0,
     isLikes: false,
     commentCount: 51,
     shareTimes: 632,
     favor:  8,
-    author:'超级无敌手003',
-    label:"我之所谓生存，并不是苟活，所谓温饱，不是奢侈，所谓发展，也不是放纵。",
-    music:"那些年看来是clasll0====80999999=="
+    author:'央视新闻',
+    label:"外交部回应高市早苗当选日本首相：望日方同中方相向而行。",
+    music:""
   },
   {
     id: '2',
-    src: $rawfile('oUCLBC9D7aJb4trcmAgsmIYfQAzKsSnje25BeC.MP4'),
+    src: $rawfile('2.mp4'),
     likesCount: 234,
     isLikes: true,
     commentCount: 0,
     shareTimes: 1,
     favor:  42,
-    author:'命为志存',
-    label:"雨下给富人，也下给穷人，下给义人，也下给不义的人；其实，雨并不公道，因为下落在一个没有公道的世界上。",
+    author:'央视新闻',
+    label:"蛋挞不要加果酱”“蛋炒饭多做几次”…河南长垣一小学召开校长听证会，24名各班代表针对衣食住行充分发表意见。网友：小小的烦恼也值得被重视！",
     music:"ssssss百分比^^^^^^^^^^^^^^^^^^^^"
   },
   {
     id: '3',
-    src: $rawfile('okGEkWzFIfFKEEAsFQhh4RICAP6yNggnyPT1QB.MP4'),
+    src: $rawfile('3.mp4'),
     likesCount: 8654,
     isLikes: false,
     commentCount: 4,
     shareTimes: 0,
     favor:  0,
-    author:'啦啦啦啦啦',
-    label:"爱情多半是不成功的，要么苦于终成眷属的厌倦，要么苦于未能终成眷属的悲哀。",
+    author:'央视新闻',
+    label:"当学生满口“包的包的”网络梗，语文老师耐心引导解释：“喜欢说这些话是偷懒的人，我们要做好中国人，说好中国话。”网友：这波引导很关键",
+    music:"数量~~~~~~~~~~~8888888"
+  },
+  {
+    id: '3',
+    src: $rawfile('4.mp4'),
+    likesCount: 8654,
+    isLikes: false,
+    commentCount: 4,
+    shareTimes: 0,
+    favor:  0,
+    author:'央视新闻',
+    label:"自带“返程票”的火箭来了！可重复使用火箭朱雀三号进入首飞关键准备阶段，为今年正式入轨发射及一级回收开展各项准备。期待朱雀三号飞向太空！",
     music:"数量~~~~~~~~~~~8888888"
   }
 ];

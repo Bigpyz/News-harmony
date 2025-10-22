@@ -13,6 +13,7 @@ import router from '@ohos.router';
 @Component
 export default struct NewsDataList {
   @Watch('changeCategory') @Link categoryId: number;
+  @Link searchKeyword: string; // 接收搜索关键词
   pageIndex: number = 1;
   @State dataList: Array<DataModel> = [];
   @State currentPage: number = 1;
@@ -25,6 +26,16 @@ export default struct NewsDataList {
   scroller: Scroller = new Scroller();
   @State tipCount: number = 0;
   @State pageState: PageState = PageState.Loading;
+
+  // 根据关键词过滤新闻列表
+  getFilteredDataList(): Array<DataModel> {
+    if (!this.searchKeyword || this.searchKeyword.trim() === '') {
+      return this.dataList;
+    }
+    return this.dataList.filter(item =>
+      item.title.toLowerCase().includes(this.searchKeyword.toLowerCase())
+    );
+  }
 
   // 重新开放所有分类的接口请求
   private isApiEnabled(): boolean {
@@ -79,7 +90,7 @@ export default struct NewsDataList {
     return new Promise<string>((resolve, reject) => {
       systemTime.getCurrentTime(false, (error, time) => {
         this.timeStamp = Math.trunc(time / 1000);
-        NewsDataViewModel.getNewsList(this.currentPage, this.pageCount, this.timeStamp)
+        NewsDataViewModel.getNewsList(this.currentPage, this.pageIndex, this.timeStamp)
           .then((value: ResponseResult) => {
             this.responseData = value;
             let temp = value.data as Array<DataModel>;
@@ -97,7 +108,7 @@ export default struct NewsDataList {
   private getListView() {
 
     List({ scroller: this.scroller }) {
-      ForEach(this.dataList, (item: DataModel) => {
+      ForEach(this.getFilteredDataList(), (item: DataModel) => {
         ListItem() {
           // 根据force_text_mode决定是否强制使用非视频组件
           if (item.force_text_mode) {

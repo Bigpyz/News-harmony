@@ -96,7 +96,7 @@ export struct RefreshPullView {
           })
           .opacity(this.canvasOpacity)
 
-        Text(this.tipStr?this.tipStr:`免流中，今日头条推荐引擎数据有${this.dataCount}条更新`)
+        Text(this.tipStr?this.tipStr:``)
           .fontSize(10)
           .backgroundColor(0xf1f3f5)
           .borderRadius(20)

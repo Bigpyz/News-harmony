@@ -8,11 +8,6 @@
       "tablet"
     ],
     "deliveryWithInstall": true,
-    "pages": "$profile:main_pages",
-    "requestPermissions": [
-      {
-        "name": "ohos.permission.INTERNET"
-      }
-    ]
+    "pages": "$profile:main_pages"
   }
 }

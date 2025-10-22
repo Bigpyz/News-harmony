@@ -18,7 +18,7 @@ export  struct LoadMoreLayout {
     Stack() {
 
 
-      Text('正在努力加载')
+      Text('')
         .fontSize(12)
         .textAlign(TextAlign.Center)
 

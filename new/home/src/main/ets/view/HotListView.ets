@@ -13,6 +13,7 @@ export struct HotListView {
   @State offsetY: number = 0;
   @State distance: number = 18;
   @State secondData: Array<hotListModel> = [];
+  @Link searchKeyword: string;
 
   // 组件生命周期：加载数据
   async aboutToAppear() {

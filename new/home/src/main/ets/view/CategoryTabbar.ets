@@ -15,6 +15,7 @@ export default struct CategoryTabBar {
   @State currentIndex: number = 0;
   @State displayWidth: number = 0;
   @Link needChange: boolean;
+  @Link searchKeyword: string;
 
 
   aboutToAppear() {
@@ -29,10 +30,10 @@ export default struct CategoryTabBar {
   newsListView(index: number) {
     // 热榜页面使用独立的组件
     if (index === 1) {
-      HotListView()
+      HotListView({ searchKeyword: $searchKeyword })
     } else {
       // 其他所有新闻分类页面都使用NewsDataList组件
-      NewsDataList({ categoryId: $currentIndex, pageIndex: index })
+      NewsDataList({ categoryId: $currentIndex, pageIndex: index, searchKeyword: $searchKeyword })
     }
   }
 

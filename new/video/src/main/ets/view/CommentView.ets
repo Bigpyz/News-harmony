@@ -3,6 +3,7 @@ import { VideoItem } from '../viewModel/VideoViewModel';
 @Component
 export struct CommentView {
   @ObjectLink private item: VideoItem;
+  onCommentClick?: () => void;
 
   build() {
     Column() {
@@ -39,6 +40,11 @@ export struct CommentView {
         .width(40)
         .height(40)
         .margin({ top: 10 })
+        .onClick(() => {
+          if (this.onCommentClick) {
+            this.onCommentClick();
+          }
+        })
       Text(this.item.commentCount === 0 ? "评论" : (this.item.commentCount.toString()))
         .fontColor(Color.White)
 
