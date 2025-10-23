@@ -1,0 +1,322 @@
+[2025-10-16T16:37:19.676] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2025-10-16T16:37:20.194] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' }
+}
+[2025-10-16T16:37:20.211] [DEBUG] debug-file - hvigorfile, resolving D:\News-harmony\TodayNews_harmony-main\hvigorfile.ts
+[2025-10-16T16:37:22.446] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2025-10-16T16:37:22.310] [DEBUG] debug-file - hvigorfile, require result:  { appTasks: [Getter] }
+[2025-10-16T16:37:22.451] [DEBUG] debug-file - Product 'default' using build option: {
+  "debuggable": true
+} in this build.
+[2025-10-16T16:37:22.459] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native,previewer
+[2025-10-16T16:37:22.465] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2025-10-16T16:37:22.474] [DEBUG] debug-file - Start recording SDK configuration permission data.
+[2025-10-16T16:37:22.499] [DEBUG] debug-file - Sdk init in 44 ms 
+[2025-10-16T16:37:22.525] [DEBUG] debug-file - Project task initialization takes 25 ms 
+[2025-10-16T16:37:22.534] [DEBUG] debug-file - hvigorfile, resolving D:\News-harmony\TodayNews_harmony-main\entry\hvigorfile.ts
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=release
+[2025-10-16T16:37:22.555] [DEBUG] debug-file - Module entry task initialization takes 3 ms 
+[2025-10-16T16:37:22.564] [DEBUG] debug-file - hvigorfile, resolving D:\News-harmony\TodayNews_harmony-main\common\hvigorfile.ts
+[2025-10-16T16:37:22.582] [DEBUG] debug-file - Module common task initialization takes 1 ms 
+[2025-10-16T16:37:22.578] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=common, buildMode=release
+[2025-10-16T16:37:22.582] [DEBUG] debug-file - hvigorfile, resolve finished D:\News-harmony\TodayNews_harmony-main\common\hvigorfile.ts
+[2025-10-16T16:37:22.591] [DEBUG] debug-file - hvigorfile, resolving D:\News-harmony\TodayNews_harmony-main\home\hvigorfile.ts
+[2025-10-16T16:37:22.602] [DEBUG] debug-file - Module home task initialization takes 1 ms 
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=home, buildMode=release
+[2025-10-16T16:37:22.602] [DEBUG] debug-file - hvigorfile, resolve finished D:\News-harmony\TodayNews_harmony-main\home\hvigorfile.ts
+[2025-10-16T16:37:22.611] [DEBUG] debug-file - hvigorfile, resolving D:\News-harmony\TodayNews_harmony-main\mine\hvigorfile.ts
+[2025-10-16T16:37:22.618] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=mine, buildMode=release
+[2025-10-16T16:37:22.622] [DEBUG] debug-file - hvigorfile, resolve finished D:\News-harmony\TodayNews_harmony-main\mine\hvigorfile.ts
+[2025-10-16T16:37:22.621] [DEBUG] debug-file - Module mine task initialization takes 1 ms 
+[2025-10-16T16:37:22.629] [DEBUG] debug-file - hvigorfile, resolving D:\News-harmony\TodayNews_harmony-main\video\hvigorfile.ts
+[2025-10-16T16:37:22.636] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=video, buildMode=release
+[2025-10-16T16:37:22.639] [DEBUG] debug-file - Module video task initialization takes 1 ms 
+[2025-10-16T16:37:22.639] [DEBUG] debug-file - hvigorfile, resolve finished D:\News-harmony\TodayNews_harmony-main\video\hvigorfile.ts
+[2025-10-16T16:37:22.642] [DEBUG] debug-file - project has submodules:entry,common,home,mine,video
+[2025-10-16T16:37:22.694] [DEBUG] debug-file - Configuration task cost before running: 2 s 532 ms 
+[2025-10-16T16:37:22.696] [DEBUG] debug-file - Executing task :entry:clean
+[2025-10-16T16:37:22.699] [DEBUG] debug-file - entry : clean cost memory 0.20404052734375
+[2025-10-16T16:37:22.702] [DEBUG] debug-file - Executing task :common:clean
+[2025-10-16T16:37:22.704] [DEBUG] debug-file - common : clean cost memory 0.1997833251953125
+[2025-10-16T16:37:22.707] [DEBUG] debug-file - Executing task :home:clean
+[2025-10-16T16:37:22.709] [DEBUG] debug-file - home : clean cost memory 0.199676513671875
+[2025-10-16T16:37:22.712] [DEBUG] debug-file - Executing task :mine:clean
+[2025-10-16T16:37:22.717] [DEBUG] debug-file - mine : clean cost memory -10.123558044433594
+[2025-10-16T16:37:22.719] [DEBUG] debug-file - Executing task :video:clean
+[2025-10-16T16:37:22.721] [DEBUG] debug-file - video : clean cost memory 0.1996307373046875
+[2025-10-16T16:37:19.678] [DEBUG] debug-file - env: hvigor-config.json5 content = { modelVersion: '5.1.0', dependencies: {} }
+[2025-10-16T16:37:22.736] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:22.760] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2025-10-16T16:37:20.195] [DEBUG] debug-file - Since current hvigor version 5.18.4 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.
+[2025-10-16T16:37:22.446] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2025-10-16T16:37:22.310] [DEBUG] debug-file - hvigorfile, binding system plugins { appTasks: [Getter] }
+[2025-10-16T16:37:22.455] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2025-10-16T16:37:22.526] [DEBUG] debug-file - hvigorfile, resolve finished D:\News-harmony\TodayNews_harmony-main\hvigorfile.ts
+[2025-10-16T16:37:22.538] [DEBUG] debug-file - hvigorfile, require result:  { hapTasks: [Getter] }
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.555] [DEBUG] debug-file - hvigorfile, resolve finished D:\News-harmony\TodayNews_harmony-main\entry\hvigorfile.ts
+[2025-10-16T16:37:22.571] [DEBUG] debug-file - hvigorfile, require result:  [Function: hspTasks]
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.595] [DEBUG] debug-file - hvigorfile, require result:  [Function: hspTasks]
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.614] [DEBUG] debug-file - hvigorfile, require result:  [Function: hspTasks]
+[2025-10-16T16:37:22.618] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.632] [DEBUG] debug-file - hvigorfile, require result:  [Function: hspTasks]
+[2025-10-16T16:37:22.636] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.642] [DEBUG] debug-file - module:common no need to execute packageHap
+[2025-10-16T16:37:22.696] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2025-10-16T16:37:22.699] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 538 ms 
+[2025-10-16T16:37:22.702] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2025-10-16T16:37:22.705] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 543 ms 
+[2025-10-16T16:37:22.707] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2025-10-16T16:37:22.709] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 548 ms 
+[2025-10-16T16:37:22.714] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2025-10-16T16:37:22.717] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 555 ms 
+[2025-10-16T16:37:22.719] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2025-10-16T16:37:22.722] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 560 ms 
+[2025-10-16T16:37:19.680] [DEBUG] debug-file - env: daemon=false
+[2025-10-16T16:37:22.739] [DEBUG] debug-file - Module 'entry' target 'ohosTest' using build option: {
+  "debuggable": true
+} in this build.
+[2025-10-16T16:37:22.761] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2025-10-16T16:37:20.196] [DEBUG] debug-file - Cache service initialization finished in 2 ms 
+[2025-10-16T16:37:22.446] [DEBUG] debug-file - Product 'default' build option: {}
+[2025-10-16T16:37:22.538] [DEBUG] debug-file - hvigorfile, binding system plugins { hapTasks: [Getter] }
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Target 'ohosTest' config: {}
+[2025-10-16T16:37:22.571] [DEBUG] debug-file - hvigorfile, binding system plugins [Function: hspTasks]
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - Module 'common' target 'default' build option: {
+  "debuggable": false,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.595] [DEBUG] debug-file - hvigorfile, binding system plugins [Function: hspTasks]
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - Module 'home' target 'default' build option: {
+  "debuggable": false,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.614] [DEBUG] debug-file - hvigorfile, binding system plugins [Function: hspTasks]
+[2025-10-16T16:37:22.618] [DEBUG] debug-file - Module 'mine' target 'default' build option: {
+  "debuggable": false,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.632] [DEBUG] debug-file - hvigorfile, binding system plugins [Function: hspTasks]
+[2025-10-16T16:37:22.636] [DEBUG] debug-file - Module 'video' target 'default' build option: {
+  "debuggable": false,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.642] [DEBUG] debug-file - module:home no need to execute packageHap
+[2025-10-16T16:37:22.700] [INFO] debug-file - Finished :entry:clean... after 3 ms 
+[2025-10-16T16:37:22.705] [INFO] debug-file - Finished :common:clean... after 3 ms 
+[2025-10-16T16:37:22.709] [INFO] debug-file - Finished :home:clean... after 3 ms 
+[2025-10-16T16:37:22.717] [INFO] debug-file - Finished :mine:clean... after 6 ms 
+[2025-10-16T16:37:22.722] [INFO] debug-file - Finished :video:clean... after 3 ms 
+[2025-10-16T16:37:22.742] [DEBUG] debug-file - Module 'common' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:19.680] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc
+[2025-10-16T16:37:22.446] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2025-10-16T16:37:22.763] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": false,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - End initialize module-target build option map, moduleName=common
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - End initialize module-target build option map, moduleName=home
+[2025-10-16T16:37:22.618] [DEBUG] debug-file - End initialize module-target build option map, moduleName=mine
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - End initialize module-target build option map, moduleName=video
+[2025-10-16T16:37:22.642] [DEBUG] debug-file - module:mine no need to execute packageHap
+[2025-10-16T16:37:22.722] [DEBUG] debug-file - Executing task ::clean
+[2025-10-16T16:37:22.744] [DEBUG] debug-file - Module 'home' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:22.763] [DEBUG] debug-file - Clear worker 0.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Module 'entry' target 'ohosTest' build option: {
+  "debuggable": true
+}
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=common, buildMode=debug
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=home, buildMode=debug
+[2025-10-16T16:37:22.619] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=mine, buildMode=debug
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=video, buildMode=debug
+[2025-10-16T16:37:22.642] [DEBUG] debug-file - module:video no need to execute packageHap
+[2025-10-16T16:37:22.722] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2025-10-16T16:37:22.747] [DEBUG] debug-file - Module 'mine' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:22.763] [DEBUG] debug-file - Worker 0 has been cleared.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.619] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.643] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2025-10-16T16:37:22.722] [DEBUG] debug-file - TodayNews_harmony-main : clean cost memory 0.02484130859375
+[2025-10-16T16:37:22.750] [DEBUG] debug-file - Module 'video' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:22.763] [DEBUG] debug-file - Current idle worker size: 1.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - Module 'common' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - Module 'home' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.619] [DEBUG] debug-file - Module 'mine' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - Module 'video' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.651] [DEBUG] debug-file - load to the disk finished
+[2025-10-16T16:37:22.722] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 561 ms 
+[2025-10-16T16:37:22.757] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2025-10-16T16:37:22.763] [DEBUG] debug-file - Current busy worker size: 0.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - End initialize module-target build option map, moduleName=common
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - End initialize module-target build option map, moduleName=home
+[2025-10-16T16:37:22.619] [DEBUG] debug-file - End initialize module-target build option map, moduleName=mine
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - End initialize module-target build option map, moduleName=video
+[2025-10-16T16:37:22.653] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-10-16T16:37:22.722] [INFO] debug-file - Finished ::clean... after 1 ms 
+[2025-10-16T16:37:22.757] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2025-10-16T16:37:22.763] [DEBUG] debug-file - Clear worker 1.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Target 'ohosTest' config: {}
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=common, buildMode=debug
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=home, buildMode=debug
+[2025-10-16T16:37:22.619] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=mine, buildMode=debug
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=video, buildMode=debug
+[2025-10-16T16:37:22.657] [DEBUG] debug-file - Module TodayNews_harmony-main Collected Dependency: 
+[2025-10-16T16:37:22.722] [DEBUG] debug-file - Executing task :entry:init
+[2025-10-16T16:37:22.763] [DEBUG] debug-file - Worker 1 has been cleared.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.599] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.619] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.657] [DEBUG] debug-file - Module TodayNews_harmony-main's total dependency: 0
+[2025-10-16T16:37:22.722] [DEBUG] debug-file - entry : init cost memory 0.010162353515625
+[2025-10-16T16:37:22.763] [DEBUG] debug-file - Current idle worker size: 0.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Module 'entry' target 'ohosTest' build option: {
+  "debuggable": true
+}
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - Module 'common' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.600] [DEBUG] debug-file - Module 'home' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.619] [DEBUG] debug-file - Module 'mine' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - Module 'video' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.658] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-10-16T16:37:22.722] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 561 ms 
+[2025-10-16T16:37:22.763] [DEBUG] debug-file - Current busy worker size: 0.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - End initialize module-target build option map, moduleName=common
+[2025-10-16T16:37:22.600] [DEBUG] debug-file - End initialize module-target build option map, moduleName=home
+[2025-10-16T16:37:22.619] [DEBUG] debug-file - End initialize module-target build option map, moduleName=mine
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - End initialize module-target build option map, moduleName=video
+[2025-10-16T16:37:22.671] [DEBUG] debug-file - Module entry Collected Dependency: D:\News-harmony\TodayNews_harmony-main\common,D:\News-harmony\TodayNews_harmony-main\home,D:\News-harmony\TodayNews_harmony-main\mine,D:\News-harmony\TodayNews_harmony-main\video
+[2025-10-16T16:37:22.723] [INFO] debug-file - Finished :entry:init... after 1 ms 
+[2025-10-16T16:37:22.764] [DEBUG] debug-file - hvigor build process will be closed.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-10-16T16:37:22.579] [DEBUG] debug-file - Module 'common' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:22.600] [DEBUG] debug-file - Module 'home' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:22.619] [DEBUG] debug-file - Module 'mine' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:22.637] [DEBUG] debug-file - Module 'video' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:22.671] [DEBUG] debug-file - Module entry's total dependency: 4
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - Executing task :common:init
+[2025-10-16T16:37:22.767] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Target 'default' config: {}
+[2025-10-16T16:37:22.676] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - common : init cost memory 0.00798797607421875
+[2025-10-16T16:37:22.768] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Target 'ohosTest' config: {}
+[2025-10-16T16:37:22.678] [DEBUG] debug-file - Module common Collected Dependency: 
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 561 ms 
+[2025-10-16T16:37:22.768] [DEBUG] debug-file - Current worker pool is terminated.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2025-10-16T16:37:22.723] [INFO] debug-file - Finished :common:init... after 1 ms 
+[2025-10-16T16:37:22.678] [DEBUG] debug-file - Module common's total dependency: 0
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - Module 'entry' target 'ohosTest' build option: {
+  "debuggable": true
+}
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - Executing task :home:init
+[2025-10-16T16:37:22.679] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-10-16T16:37:22.549] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - home : init cost memory 0.00798797607421875
+[2025-10-16T16:37:22.681] [DEBUG] debug-file - Module home Collected Dependency: D:\News-harmony\TodayNews_harmony-main\common
+[2025-10-16T16:37:22.550] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 562 ms 
+[2025-10-16T16:37:22.681] [DEBUG] debug-file - Module home's total dependency: 1
+[2025-10-16T16:37:22.723] [INFO] debug-file - Finished :home:init... after 1 ms 
+[2025-10-16T16:37:22.683] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - Executing task :mine:init
+[2025-10-16T16:37:22.685] [DEBUG] debug-file - Module mine Collected Dependency: D:\News-harmony\TodayNews_harmony-main\common
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - mine : init cost memory 0.00798797607421875
+[2025-10-16T16:37:22.685] [DEBUG] debug-file - Module mine's total dependency: 1
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 562 ms 
+[2025-10-16T16:37:22.686] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-10-16T16:37:22.723] [INFO] debug-file - Finished :mine:init... after 1 ms 
+[2025-10-16T16:37:22.688] [DEBUG] debug-file - Module video Collected Dependency: D:\News-harmony\TodayNews_harmony-main\common
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - Executing task :video:init
+[2025-10-16T16:37:22.688] [DEBUG] debug-file - Module video's total dependency: 1
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - video : init cost memory 0.00798797607421875
+[2025-10-16T16:37:22.690] [DEBUG] debug-file - Configuration phase cost:2 s 488 ms 
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 562 ms 
+[2025-10-16T16:37:22.723] [INFO] debug-file - Finished :video:init... after 1 ms 
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - Executing task ::init
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - TodayNews_harmony-main : init cost memory 0.009185791015625
+[2025-10-16T16:37:22.723] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 562 ms 
+[2025-10-16T16:37:22.723] [INFO] debug-file - Finished ::init... after 1 ms 

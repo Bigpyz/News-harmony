@@ -1,0 +1,140 @@
+{
+  "lockVersion": "1.0",
+  "settings": {
+    "resolveConflict": true,
+    "resolveConflictStrict": false,
+    "installAll": true
+  },
+  "overrides": {},
+  "overrideDependencyMap": {},
+  "modules": {
+    ".": {
+      "name": "",
+      "dependencies": {},
+      "devDependencies": {
+        "@ohos/hypium": {
+          "specifier": "1.0.6",
+          "version": "1.0.6"
+        }
+      },
+      "dynamicDependencies": {},
+      "maskedByOverrideDependencyMap": false
+    },
+    "common": {
+      "name": "common",
+      "dependencies": {},
+      "devDependencies": {},
+      "dynamicDependencies": {},
+      "maskedByOverrideDependencyMap": false
+    },
+    "entry": {
+      "name": "entry",
+      "dependencies": {
+        "common": {
+          "specifier": "file:common",
+          "version": "file:common"
+        },
+        "home": {
+          "specifier": "file:home",
+          "version": "file:home"
+        },
+        "mine": {
+          "specifier": "file:mine",
+          "version": "file:mine"
+        },
+        "video": {
+          "specifier": "file:video",
+          "version": "file:video"
+        }
+      },
+      "devDependencies": {},
+      "dynamicDependencies": {},
+      "maskedByOverrideDependencyMap": false
+    },
+    "home": {
+      "name": "home",
+      "dependencies": {
+        "common": {
+          "specifier": "file:common",
+          "version": "file:common"
+        }
+      },
+      "devDependencies": {},
+      "dynamicDependencies": {},
+      "maskedByOverrideDependencyMap": false
+    },
+    "mine": {
+      "name": "mine",
+      "dependencies": {
+        "common": {
+          "specifier": "file:common",
+          "version": "file:common"
+        }
+      },
+      "devDependencies": {},
+      "dynamicDependencies": {},
+      "maskedByOverrideDependencyMap": false
+    },
+    "video": {
+      "name": "video",
+      "dependencies": {
+        "common": {
+          "specifier": "file:common",
+          "version": "file:common"
+        }
+      },
+      "devDependencies": {},
+      "dynamicDependencies": {},
+      "maskedByOverrideDependencyMap": false
+    }
+  },
+  "packages": {
+    "@ohos/hypium@1.0.6": {
+      "integrity": "sha512-bb3DWeWhYrFqj9mPFV3yZQpkm36kbcK+YYaeY9g292QKSjOdmhEIQR2ULPvyMsgSR4usOBf5nnYrDmaCCXirgQ==",
+      "storePath": "oh_modules/.ohpm/@ohos+hypium@1.0.6",
+      "dependencies": {},
+      "dynamicDependencies": {},
+      "dev": true,
+      "dynamic": false,
+      "maskedByOverrideDependencyMap": false
+    },
+    "common@file:common": {
+      "storePath": "common",
+      "dependencies": {},
+      "dynamicDependencies": {},
+      "dev": false,
+      "dynamic": false,
+      "maskedByOverrideDependencyMap": false
+    },
+    "home@file:home": {
+      "storePath": "home",
+      "dependencies": {
+        "common": "common"
+      },
+      "dynamicDependencies": {},
+      "dev": false,
+      "dynamic": false,
+      "maskedByOverrideDependencyMap": false
+    },
+    "video@file:video": {
+      "storePath": "video",
+      "dependencies": {
+        "common": "common"
+      },
+      "dynamicDependencies": {},
+      "dev": false,
+      "dynamic": false,
+      "maskedByOverrideDependencyMap": false
+    },
+    "mine@file:mine": {
+      "storePath": "mine",
+      "dependencies": {
+        "common": "common"
+      },
+      "dynamicDependencies": {},
+      "dev": false,
+      "dynamic": false,
+      "maskedByOverrideDependencyMap": false
+    }
+  }
+}

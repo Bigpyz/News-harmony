@@ -1,0 +1,165 @@
+import { HttpService } from '../utils/HttpService';
+
+// 定义API数据接口
+export interface HotDataApiItem {
+  index: number;
+  text: string;
+  bgColor?: string;
+  color?: string;
+  content: string;
+  source?: string;
+  icon?: string;
+  hotWord?: string;
+  image?: string;
+}
+
+export class hotListModel {
+  index: number;
+  color: string;
+  bgColor: string;
+  text: string;
+  hotWord?: string;
+  icon?: Resource;
+  content: string; // 新增详细内容字段
+  source: string; // 新增新闻来源字段
+  image?: Resource; // 新增图片字段
+
+  constructor(index: number, text: string, bgColor: string, color: string, content: string, source: string = '热榜新闻', icon?: Resource, hotWord?: string, image?: Resource) {
+    this.index = index;
+    this.icon = icon;
+    this.bgColor = bgColor;
+    this.text = text;
+    this.hotWord = hotWord;
+    this.color = color;
+    this.content = content;
+    this.source = source;
+    this.image = image;
+  }
+
+  // 从后端数据创建实例的静态方法
+  static fromApiData(data: HotDataApiItem): hotListModel {
+    return new hotListModel(
+      data.index,
+      data.text,
+      data.bgColor || '',
+      data.color || '',
+      data.content,
+      data.source || '热榜新闻',
+      data.icon ? $r(data.icon) : undefined,
+      data.hotWord,
+      data.image ? $r(data.image) : undefined
+    );
+  }
+}
+
+
+const hotListData: Array<hotListModel> = [
+  new hotListModel(0, "2024年全国*****&#*@#两会即将召开", 'ff0000', '#ff0000',
+    "2024年全国两会即将在北京召开，这是全国人民政治生活中的一件大事。本次两会将审议政府工作报告、审查国民经济和社会发展计划、审查中央和地方预算等重要议题。\n\n代表委员们将围绕经济发展、民生改善、科技创新、绿色发展等热点话题展开深入讨论，为国家发展建言献策。会议期间还将就重大法律法规修订、重要人事任免等事项进行审议表决。\n\n两会的召开标志着新一年国家治理和发展的重要开端，全社会都在关注会议成果和政策走向。",
+    "人民日报", $r('app.media.hot_sticky_Normal'), "", $r('app.media.1')),
+  new hotListModel(1, "春节假期全国旅游收入创新高", '#FFF2E9', '#FF731F',
+    "据文化和旅游部统计，今年春节假期全国旅游收入达到5139.42亿元，同比增长7.7%，创历史新高。全国共接待游客4.74亿人次，同比增长34.3%。\n\n春节期间，各地推出丰富多彩的文旅活动，传统文化与现代元素相结合，吸引了大量游客。冰雪旅游、温泉度假、民俗体验等成为热门选择。\n\n数据显示，国内旅游市场全面复苏，消费活力持续释放，为经济发展注入强劲动力。旅游业的繁荣也带动了餐饮、住宿、交通等相关产业的发展。",
+    "中国旅游报", undefined, "新", $r('app.media.2')),
+  new hotListModel(2, "AI技术助力春耕生产智能化", '#FCEBED', '#EE3A3B',
+    "随着春耕时节的到来，人工智能技术在农业生产中发挥着越来越重要的作用。智能农机、无人机植保、精准施肥等技术广泛应用，大大提高了农业生产效率。\n\n在江苏、山东等农业大省，农民使用AI驱动的智能设备进行土壤检测、作物监测和病虫害预警。这些技术不仅减少了人工成本，还提高了农作物的产量和品质。\n\n专家表示，AI技术与传统农业的深度融合，正在推动农业向数字化、智能化方向发展，为保障国家粮食安全提供了有力支撑。",
+    "农民日报", undefined, "热", $r('app.media.3')),
+  new hotListModel(3, "新能源汽车销量持续增长", '', '',
+    "2024年开年以来，新能源汽车市场延续了强劲的增长势头。据中汽协数据显示，1月份新能源汽车销量达到72.9万辆，同比增长78.8%，市场渗透率超过30%。\n\n比亚迪、特斯拉、蔚来等主要厂商纷纷推出新车型，在续航里程、充电速度、智能化水平等方面不断突破。同时，充电基础设施建设也在加速推进，为新能源汽车普及创造了良好条件。\n\n业内人士预计，随着技术进步和政策支持，新能源汽车将在2024年迎来更大发展，有望成为汽车市场的主导力量。",
+    "汽车之家", undefined, "", $r('app.media.4')),
+  new hotListModel(4, "专家解读：经济复苏态势良好", '#E8F1FF', '#006AFE',
+    "多位经济学家在接受采访时表示，当前中国经济复苏态势良好，各项指标显示经济运行稳中向好。消费市场活跃，投资增长稳定，出口保持韧性。\n\n国家统计局最新数据显示，制造业PMI连续4个月位于扩张区间，服务业商务活动指数持续高于临界点。这表明经济活动继续恢复，市场预期不断改善。\n\n专家认为，随着各项稳增长政策措施的持续发力，以及消费潜力的进一步释放，中国经济有望在2024年实现更高质量的发展。",
+    "经济日报", undefined, "解读", $r('app.media.5')),
+  new hotListModel(5, "教育部发布新学期开学通知", '', '',
+    "教育部近日发布通知，要求各地各校做好新学期开学准备工作，确保师生安全有序返校。通知强调要加强校园安全管理，做好疫情防控常态化工作。\n\n各地教育部门要指导学校完善开学方案，做好教学计划安排，确保教育教学质量。同时要关注学生心理健康，帮助学生尽快适应新学期学习生活。\n\n通知还要求加强家校沟通，形成教育合力，共同促进学生全面发展。各级各类学校要严格落实各项要求，确保新学期开学工作平稳有序。",
+    "中国教育报", undefined, "", $r('app.media.6')),
+  new hotListModel(6, "气候变化对农业影响分析报告", '#E8F1FF', '#006AFE',
+    "中科院最新发布的研究报告显示，气候变化对我国农业生产产生了显著影响。报告分析了近30年来气温、降水等气候要素的变化趋势及其对农作物产量的影响。\n\n研究发现，气温升高有利于北方地区农作物生长期延长，但也增加了病虫害发生的风险。降水分布不均导致部分地区干旱频发，对农业生产造成不利影响。\n\n专家建议，要加强农业适应性管理，发展抗逆性强的作物品种，完善农业基础设施建设，提高农业应对气候变化的能力。",
+    "科技日报", undefined, "解读", $r('app.media.7'))
+]
+
+
+
+const secondData: Array<hotListModel> = [
+  new hotListModel(1, "我国成*（#@*（#*@（功发射通信技术试验卫星十一号", '#FFF2E9', '#FF731F',
+    "北京时间今日凌晨，我国在西昌卫星发射中心使用长征三号乙运载火箭，成功将通信技术试验卫星十一号送入预定轨道，发射任务取得圆满成功。\n\n该卫星主要用于开展多频段、高速率卫星通信技术试验验证，将为我国卫星通信技术发展和相关产业应用提供重要支撑。卫星配备了先进的通信载荷，具备大容量、高可靠性等特点。\n\n此次发射是长征系列运载火箭的第506次飞行，标志着我国航天事业在新的一年里实现了开门红，为后续航天任务奠定了良好基础。",
+    "中国航天报", undefined, "新", $r('app.media.11')),
+  new hotListModel(2, "多部门联合部署春季开学工作", '#FCEBED', '#EE3A3B',
+    "教育部、公安部、市场监管总局等多部门近日联合召开会议，部署春季开学安全工作。会议要求各地各校要高度重视校园安全，确保师生生命财产安全。\n\n各部门将加强协调配合，重点做好校园周边环境整治、食品安全监管、交通安全保障等工作。同时要完善应急预案，提高突发事件处置能力。\n\n会议强调，要建立健全校园安全长效机制，压实各方责任，形成齐抓共管的工作格局，为学生创造安全、和谐的学习环境。",
+    "中国教育报", undefined, "热", $r('app.media.12')),
+  new hotListModel(3, "国家博物馆推出龙年新春文化展", '', '',
+    "中国国家博物馆推出龙行中华甲辰龙年新春文化展，展览汇集了全国各地与龙文化相关的珍贵文物和艺术品，全面展示了龙文化的深厚内涵和时代价值。\n\n展览分为龙的起源、龙的演变、龙的寓意等主题板块，通过200余件展品，生动诠释了龙作为中华民族精神象征的文化意义。其中不乏国宝级文物，具有很高的历史和艺术价值。\n\n展览采用了现代科技手段，通过数字化展示、互动体验等方式，让观众更好地了解和感受龙文化的魅力，传承和弘扬中华优秀传统文化。",
+    "中国文物报", undefined, "", $r('app.media.13')),
+  new hotListModel(4, "南方多地将迎新一轮雨雪天气", '#E8F1FF', '#006AFE',
+    "据中央气象台预报，未来三天南方多地将迎来新一轮雨雪天气过程。湖南、湖北、安徽、江苏等地部分地区将出现中到大雪，局地有暴雪。\n\n气象专家分析，此次雨雪天气过程影响范围广、强度大，可能对交通运输、农业生产等造成不利影响。各地要做好防范应对工作，加强交通管制和安全提醒。\n\n相关部门提醒公众，雨雪天气期间要注意出行安全，及时关注天气预报和交通信息，合理安排出行计划。农业部门要指导农民做好设施农业和畜牧业的防寒保暖工作。",
+    "中国气象报", undefined, "解读", $r('app.media.15')),
+  new hotListModel(5, "春节消费市场彰显经济活力", '', '',
+    "今年春节期间，全国消费市场呈现出强劲的增长态势，各类消费数据均创历史新高。商务部监测数据显示，春节假期重点零售和餐饮企业销售额同比增长8.5%。\n\n线上线下消费融合发展，传统年货和新兴消费品类齐头并进。智能家电、新能源汽车、绿色食品等成为消费热点。同时，文化娱乐、旅游休闲等服务消费快速恢复。\n\n专家表示，春节消费的火爆充分体现了中国经济的韧性和活力，消费作为经济增长的主要驱动力作用进一步凸显，为全年经济发展开了个好头。",
+    "中国商报", undefined, "", $r('app.media.16'))
+]
+
+export { hotListData,secondData }
+
+
+
+export class LocalDataManager {
+
+  private static localDataManager: LocalDataManager;
+  private httpService: HttpService;
+
+  private constructor() {
+    this.httpService = HttpService.getInstance();
+  }
+
+  static instance() {
+    if (!LocalDataManager.localDataManager) {
+      LocalDataManager.localDataManager = new LocalDataManager();
+    }
+    return LocalDataManager.localDataManager;
+  }
+
+  // 从后端获取热门数据列表
+  async queryFirstList(): Promise<Array<hotListModel>> {
+    try {
+      const response = await this.httpService.get<Array<HotDataApiItem>>('/hotData');
+      if (response.code === 200) {
+        return response.data.map(item => hotListModel.fromApiData(item));
+      } else {
+        console.error('获取热门数据失败:', response.message);
+        // 如果网络请求失败，返回本地数据作为备用
+        return hotListData;
+      }
+    } catch (error) {
+      console.error('网络请求异常:', error);
+      // 如果网络请求失败，返回本地数据作为备用
+      return hotListData;
+    }
+  }
+
+  // 从后端获取第二页数据列表
+  async querySecondList(): Promise<Array<hotListModel>> {
+    try {
+      const response = await this.httpService.get<Array<HotDataApiItem>>('/hotData?page=2');
+      if (response.code === 200) {
+        return response.data.map(item => hotListModel.fromApiData(item));
+      } else {
+        console.error('获取第二页数据失败:', response.message);
+        // 如果网络请求失败，返回本地数据作为备用
+        return secondData;
+      }
+    } catch (error) {
+      console.error('网络请求异常:', error);
+      // 如果网络请求失败，返回本地数据作为备用
+      return secondData;
+    }
+  }
+
+  // 获取本地数据（备用方法）
+  getLocalFirstList() {
+    return hotListData;
+  }
+
+  getLocalSecondList() {
+    return secondData;
+  }
+
+}
